@@ -17,9 +17,11 @@ pc = portal.Context()
 # Create a Request object to start building the RSpec.
 request = pc.makeRequestRSpec()
  
-# Add a raw PC to the request.
+# Add XenVM to request
 node = request.XenVM("node")
+# Specify tthe disk image
 node.disk_image = "urn:publicid:IDN+emulad.net+image+emulab-ops:CENTOS7-64-STD"
+
 node.routable_control_ip = "true"
 
 # Install and execute a script that is contained in the repository.
