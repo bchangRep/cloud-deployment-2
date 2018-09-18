@@ -25,7 +25,7 @@ nodeList = list()
 
 # Append all existing nodes into nodeList
 for n in range(num_of_nodes):
-     nodeList.append(request.XenVM("node-" + str(n)))
+     nodeList.append(request.XenVM("node-" + str(n+1)))
 
 # Specify tthe disk image
 for node in nodeList:
