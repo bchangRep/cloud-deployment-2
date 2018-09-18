@@ -31,13 +31,13 @@ lan = request.LAN("lan)
 # Create another list for custom IPAddresses
 address = list()
 
-link = request.LAN("lan")
+lan = request.LAN("lan")
 address = list()
 for m in range(len(nodeList)):
 	address.append (nodeList[m].addInterface("if1"))
     	address[m].component_id = "eth1"
 	address[m].addAddress(pg.IPv4Address("192.168.1.{}".format(str(m)),"255.255.255.0"))
-	link.addInterface(address[m])
+	lan.addInterface(address[m])
 
 # Print the RSpec to the enclosing page.
 pc.printRequestRSpec(request)
