@@ -25,8 +25,6 @@ for node in nodeList:
      node.addService(pg.Execute(shell="sh", command="sudo /local/repository/silly.sh"))
      if x:
           node.routable_control_ip = "true"
-     
-lan = request.LAN("lan)
 
 # Create another list for custom IPAddresses
 address = list()
